@@ -17,6 +17,7 @@ export default function Footer() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: idx * 0.1 }}
               viewport={{ once: true }}
+              className="text-left"
             >
               <h4 className="font-bold text-white mb-4 text-lg">{section.title}</h4>
               <ul className="space-y-2">
@@ -40,20 +41,24 @@ export default function Footer() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.3 }}
             viewport={{ once: true }}
+            className="text-left"
           >
             <h4 className="font-bold text-white mb-4 text-lg">Connect</h4>
-            <div className="flex gap-4">
+            <div className="grid grid-cols-3 gap-4">
               {SOCIAL_LINKS.map((social) => (
                 <motion.a
                   key={social.href}
                   href={social.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  whileHover={{ scale: 1.2, rotate: 10 }}
+                  whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  className="w-10 h-10 rounded-full border border-primary/50 flex items-center justify-center text-primary hover:shadow-neon transition-all duration-300"
+                  className="flex flex-col items-center justify-start gap-2"
                 >
-                  {social.icon}
+                  <div className="w-12 h-12 rounded-full border border-primary/50 flex items-center justify-center text-primary hover:shadow-neon transition-all duration-300 text-xl">
+                    {social.icon}
+                  </div>
+                  <span className="text-sm text-foreground/60">{social.label}</span>
                 </motion.a>
               ))}
             </div>

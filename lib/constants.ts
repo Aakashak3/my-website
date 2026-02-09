@@ -24,24 +24,9 @@ export const FEATURES = [
     description: 'Leveraging ChatGPT, Claude, and custom AI solutions to automate workflows',
   },
   {
-    icon: '✨',
-    title: 'Prompt Engineering',
-    description: 'Crafting optimized prompts for image generation, video, and code generation',
-  },
-  {
     icon: '📚',
     title: 'AI Prompts Library',
     description: 'Access professional prompts for image generation, video scripts, and coding tasks',
-  },
-  {
-    icon: '🎥',
-    title: 'YouTube Tutorials',
-    description: 'Watch tutorials on web development, AI automation, and modern tech stacks',
-  },
-  {
-    icon: '🚀',
-    title: 'Rapid Deployment',
-    description: 'Deploy projects to Vercel, AWS, Docker—fast, scalable, and production-ready',
   },
 ];
 
@@ -68,19 +53,19 @@ export const FOOTER_SECTIONS = [
 
 export const SOCIAL_LINKS = [
   {
-    icon: '📧',
-    href: 'mailto:hello@devai.com',
-    label: 'Email',
+    icon: '📸',
+    href: 'https://instagram.com',
+    label: 'Instagram',
+  },
+  {
+    icon: '▶️',
+    href: 'https://youtube.com',
+    label: 'YouTube',
   },
   {
     icon: '🔗',
     href: 'https://linkedin.com',
     label: 'LinkedIn',
-  },
-  {
-    icon: '𝕏',
-    href: 'https://twitter.com',
-    label: 'Twitter',
   },
 ];
 

@@ -9,7 +9,7 @@ export default function Home() {
       <Hero
         title="Full Stack Developer"
         subtitle="& AI Automation Expert"
-        description="Crafting cutting-edge web applications powered by AI. Specializing in automation, prompt engineering, and full-stack development."
+        description="AI-powered websites, smart automation solutions, and ready-to-use prompts to scale your business faster."
         buttons={CTA_BUTTONS}
       />
 
