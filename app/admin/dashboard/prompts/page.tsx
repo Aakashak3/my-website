@@ -19,6 +19,14 @@ interface Category {
   name: string;
 }
 
+const checkUser = async () => {
+  const { data: { user } } = await supabase.auth.getUser();
+  console.log("Current Logged-in User:", user?.email);
+  if (user?.email !== 'aakashnarayanan465@gmail.com') {
+    alert("Warning: You are not logged in as the correct admin!");
+  }
+};
+
 export default function PromptsPanel() {
   const [prompts, setPrompts] = useState<Prompt[]>([]);
   const [categories, setCategories] = useState<Category[]>([]);
@@ -39,6 +47,7 @@ export default function PromptsPanel() {
   useEffect(() => {
     fetchPrompts();
     fetchCategories();
+    checkUser();
   }, []);
 
   const fetchPrompts = async () => {
@@ -94,8 +103,10 @@ export default function PromptsPanel() {
       setEditingId(null);
       setFormData({ title: '', description: '', content: '', category_id: '', is_featured: false });
     } catch (err) {
-      console.error('Error saving prompt:', err);
-      alert('Error saving prompt');
+      const anyErr = err as any;
+      const message = anyErr?.message || (typeof anyErr === 'string' ? anyErr : JSON.stringify(anyErr));
+      console.error('Error saving prompt:', message, anyErr);
+      alert(`Error saving prompt: ${message}`);
     }
   };
 
@@ -120,8 +131,10 @@ export default function PromptsPanel() {
       if (error) throw error;
       await fetchPrompts();
     } catch (err) {
-      console.error('Error deleting prompt:', err);
-      alert('Error deleting prompt');
+      const anyErr = err as any;
+      const message = anyErr?.message || (typeof anyErr === 'string' ? anyErr : JSON.stringify(anyErr));
+      console.error('Error deleting prompt:', message, anyErr);
+      alert(`Error deleting prompt: ${message}`);
     }
   };
 
