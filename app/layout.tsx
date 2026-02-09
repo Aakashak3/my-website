@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
+import { AuthProvider } from '@/lib/auth-context';
 import '@/styles/globals.css';
 
 export const metadata: Metadata = {
@@ -46,9 +47,11 @@ export default function RootLayout({
         <meta name="theme-color" content="#09090b" />
       </head>
       <body className="bg-background text-foreground">
-        <Navbar />
-        <main>{children}</main>
-        <Footer />
+        <AuthProvider>
+          <Navbar />
+          <main>{children}</main>
+          <Footer />
+        </AuthProvider>
       </body>
     </html>
   );
