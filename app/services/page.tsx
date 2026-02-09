@@ -3,7 +3,8 @@
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import ServiceCard from '@/components/ServiceCard';
-import { SERVICES_DATA } from '@/lib/constants';
+import ProjectCard from '@/components/ProjectCard';
+import { SERVICES_DATA, PROJECTS_DATA } from '@/lib/constants';
 
 export default function ServicesPage() {
   return (
@@ -31,6 +32,31 @@ export default function ServicesPage() {
             {SERVICES_DATA.map((service, index) => (
               <ServiceCard key={service.id} service={service} delay={index * 0.1} />
             ))}
+          </div>
+
+          {/* Projects Showcase Section */}
+          <div className="mb-20">
+            <motion.div
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-4xl md:text-5xl font-bold mb-4">
+                <span className="text-white">Completed </span>
+                <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">Projects</span>
+              </h2>
+              <p className="text-foreground/60 max-w-2xl mx-auto">
+                Check out some of my recent projects and see what I can build for you
+              </p>
+            </motion.div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+              {PROJECTS_DATA.map((project, index) => (
+                <ProjectCard key={project.id} project={project} delay={index * 0.1} />
+              ))}
+            </div>
           </div>
 
           {/* CTA Section */}

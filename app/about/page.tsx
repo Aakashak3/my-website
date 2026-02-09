@@ -118,10 +118,7 @@ export default function About() {
           <GlassCard>
             <p className="text-foreground text-center leading-relaxed">
               I'm a <span className="text-primary font-semibold">Full Stack Developer</span> and{' '}
-              <span className="text-accent font-semibold">AI Automation Expert</span> with a passion for creating
-              cutting-edge web applications. I specialize in leveraging modern technologies and AI to build solutions that are not only
-              functional but also innovative and scalable. With expertise in prompt engineering, I help businesses
-              automate workflows and enhance their digital presence.
+              <span className="text-accent font-semibold">AI Automation Expert</span> building modern, scalable web applications using AI and the latest technologies.
             </p>
           </GlassCard>
         </motion.div>

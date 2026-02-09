@@ -17,12 +17,12 @@ export default function YouTubePage() {
             transition={{ duration: 0.6 }}
             className="mb-8"
           >
-            <div className="inline-block mb-6 text-5xl">🎥</div>
+            <div className="inline-block mb-6 text-5xl">📺</div>
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-4">
               YouTube Channel
             </h1>
             <p className="text-lg text-foreground/70 max-w-2xl mx-auto">
-              Tutorials on web development, AI automation, prompt engineering, and modern tech stacks
+              Fun and easy AI tutorials, tools, and challenges 🤖<br />Beginner-friendly content to learn AI step by step 🚀
             </p>
           </motion.div>
 

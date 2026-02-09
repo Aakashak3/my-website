@@ -293,3 +293,38 @@ export const CONTACT_METHODS = [
   },
 ];
 
+export const PROJECTS_DATA = [
+  {
+    id: 'project-1',
+    title: 'E-Commerce Platform',
+    description: 'Full-stack e-commerce solution with AI-powered recommendations',
+    image: 'https://via.placeholder.com/400x300?text=E-Commerce+Platform',
+    demoUrl: 'https://ecommerce-demo.com',
+    tags: ['React', 'Next.js', 'Node.js', 'AI'],
+  },
+  {
+    id: 'project-2',
+    title: 'AI Content Generator',
+    description: 'Automated content generation tool powered by ChatGPT API',
+    image: 'https://via.placeholder.com/400x300?text=AI+Content+Generator',
+    demoUrl: 'https://ai-content-demo.com',
+    tags: ['Next.js', 'ChatGPT API', 'Tailwind CSS'],
+  },
+  {
+    id: 'project-3',
+    title: 'Project Management App',
+    description: 'Collaborative project management with real-time updates',
+    image: 'https://via.placeholder.com/400x300?text=Project+Management',
+    demoUrl: 'https://project-mgmt-demo.com',
+    tags: ['React', 'Supabase', 'Real-time DB'],
+  },
+  {
+    id: 'project-4',
+    title: 'AI Chatbot SaaS',
+    description: 'Multi-tenant SaaS platform for AI-powered customer support',
+    image: 'https://via.placeholder.com/400x300?text=AI+Chatbot+SaaS',
+    demoUrl: 'https://chatbot-saas-demo.com',
+    tags: ['Next.js', 'Claude API', 'PostgreSQL'],
+  },
+];
+
